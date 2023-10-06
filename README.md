@@ -1,13 +1,24 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 THIS IS MY REACT PROJECT
+
+Requirements
+------------
+- must use ContextAPI
+- one child and grandchild component must access the state
+- one vhild and grandchild component must update the state
+- react router with 3 routes
+- one ui framwork(bootstrap, bulma)
+- store info from the api call into the state
+- inclue payment method
+
+
+
+
+
+
+
+
+
+
 
 I want to add to my todo list
 features
