@@ -5,10 +5,12 @@ import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Login from './components/RegistrationPage.jsx'
 import RegistrationPage from './components/RegistrationPage.jsx'
+import Todo from './components/Todo.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <App /> */}
-    <RegistrationPage />
-  </React.StrictMode>,
+    <Todo />
+    {/* <RegistrationPage /> */}
+  </React.StrictMode>
 )

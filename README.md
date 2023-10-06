@@ -12,12 +12,11 @@ THIS IS MY REACT PROJECT
 I want to add to my todo list
 features
 --------
-- add a way to add projects/task(folder of tasks)
+- add a way to edit task(mabye)
 - add the option to put in favorits
 - add a timer for each task
-- be able to mark as completed
 - rating task effieciency(mabye)
-
+- add a calender to assign the task to (mabye)
 
 
 
