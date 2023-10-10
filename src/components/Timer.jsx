@@ -1,89 +1,76 @@
-import React, { useState, useEffect } from 'react'
+import React from "react";
+import { BsStopwatch } from "react-icons/bs";
+import styled from "styled-components";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '../Timer.css'
 
 
-const Timer = () => {
-    const [time, setTime] = useState(100000); //seting the initial time to be zero
-    const [isRunning, setIsRunning] = useState(false); //we are creating is running to represent if the watch is running or not and using the bool useState to represent the start and stop
-    const [timerInput, setTimerInput]=useState('') //storing the input value for the timer in a string
+const TimerWrapper = styled.div`
+  margin-top: 30vh;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #222;
+  color: #eee;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.4);
+  padding: 1rem 0;
 
-
-
-    
-  
-    useEffect(() => {
-      //using to set up the start stop
-      //using use effect to check if the timer is running
-      let intervalId; //setting a intervalId
-      if (isRunning) {
-        //if the watch is running then the interval will update the Time state by 1 every 10 milisec
-        intervalId = setInterval(() => setTime(time + 1), 10); //this intervalId will hold setTime as well as time. The setInterval is a function that is used that calls in milliseconds
-      }
-      return () => clearInterval(intervalId);
-    }, [isRunning, time]);
-  
-    const hours = Math.floor(time / 360000); //using math.floor to to convert the time to millisec so we divide the time divided by 360,000 to get hours
-    const min = Math.floor((time % 360000) / 6000); //dividing the time to by 360,000 and deviding that by 6000 to convert to min
-    const sec = Math.floor((time % 6000) / 100); //  divides the time by 6000 and then devides that value by 100 to convert to seconds
-    const millisec = time % 100; // converts to millisec  
-    //creating a functions to stop and start the timer
-    const startAndStop = () => {
-      //updating the isRunning to true
-      setIsRunning(!isRunning);
-    };
-  
-    //making a function to handle the reset of the timer
-    const reset = () => {
-      setTime(0);
-    };
-  
-   
-    const video=()=>{
-      if(isPlaying==false){
-      setIsPlaying(true)
-    }else if(isPlaying==true){
-      setIsPlaying(false)
-    }
+  .stop-watch {
+    font-size: 6rem;
+    margin-right: 1rem;
   }
-  
-    
-  
-  
-    const handleStart=()=>{
-      startAndStop();
-        //   video();
-    }
-  
-  
-  
-    return (
-      <body>        
-        <div id="text">
-          <div id="timer-buttons">
-            <input type="number" />
-          <div id="timer">
-            {/* converting the times to strings and using padStart to */}
-            {hours}:{min.toString().padStart(2, "0")}:
-            {sec.toString().padStart(2, "0")}:
-            {millisec.toString().padStart(2, "0")}
-        </div>
-            <br></br>
-            <button id="start" onClick={handleStart}>
-              {isRunning ? "Stop Game" : "Start Game"}
-            </button>
-            <button id="reset" onClick={reset}>
-              Reset
-            </button>
-            </div>
-            <div video>
-            </div>
-          </div>
-            
-          <br></br>
-          <br></br>
-          <br></br>
-      </body>
-    );
-  };
+  label {
+    margin-bottom: 0.5rem;
+  }
+  input {
+    width: 100px;
+    margin-right: 1rem;
+    color: #282c34;
+    outline: none;
+    border: none;
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0rem 0.5rem;
+    border-radius: 5px;
+  }
+  input:hover {
+    background-color: #928f8f;
+  }
+`;
 
-
-export default Timer
+export default function Timer({
+  milliseconds,
+  seconds,
+  minutes,
+  hours,
+  changeSeconds,
+  changeMinutes,
+  changeHours,
+}) {
+  return (
+    <TimerWrapper>
+      <BsStopwatch className="stop-watch " />
+      <div className="d-flex flex-column">
+        <label>hh</label>
+        <input value={hours} onChange={changeHours} />
+      </div>{" "}
+      <div className="d-flex flex-column">
+        <label>mm</label>
+        <input value={minutes} onChange={changeMinutes} />
+      </div>{" "}
+      <div className="d-flex flex-column">
+        <label>ss</label>
+        <input value={seconds} onChange={changeSeconds} />
+      </div>{" "}
+      <div className="d-flex flex-column">
+        <label>ms</label>
+        <input value={milliseconds} />
+      </div>
+    </TimerWrapper>
+  );
+}

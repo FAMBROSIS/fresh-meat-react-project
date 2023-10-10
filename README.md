@@ -12,8 +12,13 @@ Requirements
 
 
 
-
-
+A app catered to people who dont know how to cook
+---------------------
+-add a bunch of random kitchen saftey facts
+- timer on the video section
+- use effect on the timer so it can be on every page
+- metric converter
+- hav a list of all the things ill be going over on the project and each requirement
 
 
 
@@ -24,6 +29,9 @@ I want to add to my todo list
 features
 --------
 - add a way to edit task(mabye)
+- add calorie checker
+- put video for backgroud music
+- option to post recipies(mabye)
 - add the option to put in favorits
 - add a timer for each task
 - rating task effieciency(mabye)
