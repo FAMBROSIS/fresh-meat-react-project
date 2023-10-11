@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Tools = () => {
   return (
-    <div>Tools</div>
-  )
-}
+    <div>
+      <div id="tools">
+        <Converter />
+      </div>
+    </div>
+  );
+};
 
-export default Tools
+export default Tools;
