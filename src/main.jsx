@@ -10,17 +10,16 @@ import Video from './components/Video.jsx'
 import Music from './components/Music.jsx'
 import Converter from './components/Converter.jsx'
 import TimerWrapper from './components/TimerWrapper.jsx'
+import { BrowserRouter } from 'react-router-dom'
+import VeganRecipe from './components/VeganRecipe.jsx'
+import Theme from './components/Theme.jsx'
+import HomePage from './components/HomePage.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    {/* <App /> */}
-    <Recipe />
-    {/* <Video /> */}
-    {/* <Music /> */}
-    {/* <Converter /> */}
-    {/* <Todo /> */}
-    {/* <Timer /> */}
-    <TimerWrapper />
-    {/* <RegistrationPage /> */}
-  </React.StrictMode>
+    <BrowserRouter>
+    {/* <VeganRecipe /> */}
+    <App />
+    {/* <Theme /> */}
+    </BrowserRouter>
 )

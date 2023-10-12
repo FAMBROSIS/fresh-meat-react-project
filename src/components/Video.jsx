@@ -24,7 +24,7 @@ const Video = () => {
 
 
   return (
-    <div>
+    <div id='body'>
 
         {isPlaying && <YouTube videoId={videoURL} />}
         <p>Watch something while you wait? Click Here</p>

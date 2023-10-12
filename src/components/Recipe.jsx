@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-
+import '../Recipe.css'
 const Recipe = () => {
   const [mexicanRecipe, setMexicanRecipe] = useState([]);
   const [recipeId, setRecipeId] = useState(34);
   const [recipeData, setRecipeData] = useState(null);
 
-  const [id, setId] = useState(null);
-  const [title, setTitle] = useState(null);
-  const [difficulty, setDifficulty] = useState(null);
-  const [portion, setPortion] = useState(null);
-  const [time, setTime] = useState(null);
-  const [description, setDescription] = useState(null);
-  const [ingredients, setIngredients] = useState([]);
-  const [method, setMethod] = useState([]);
-  const [image, setImage] = useState(null);
+  // const [id, setId] = useState(null);
+  // const [title, setTitle] = useState(null);
+  // const [difficulty, setDifficulty] = useState(null);
+  // const [portion, setPortion] = useState(null);
+  // const [time, setTime] = useState(null);
+  // const [description, setDescription] = useState(null);
+  // const [ingredients, setIngredients] = useState([]);
+  // const [method, setMethod] = useState([]);
+  // const [image, setImage] = useState(null);
 
   const fetchMRecipe = async () => {
     const url = `https://the-mexican-food-db.p.rapidapi.com/${recipeId}/`;
@@ -68,20 +68,19 @@ setMexicanRecipe((prevRecipes) => [...prevRecipes, result]);
 
   return (
     <>
-      <div>
-        <button onClick={fetchMRecipe}>fetchRecipe</button>
+      <div id="body">
+        <button onClick={fetchMRecipe}>Get A Recipe?</button>
       </div>
       {mexicanRecipe.map((recipe, index) => (
         <div key={index}>
           <p>{recipe.title}</p>
           <img src={recipe.image}></img>
-          <p>{recipe.difficulty}</p>
-          <p>{recipe.portion}</p>
-          <p>{recipe.time}</p>
-          <p>{recipe.description}</p>
-          <p>{recipe.ingredients}</p>
+          <p>Difficulty: {recipe.difficulty}</p>
+          <p>Meal Size: {recipe.portion}</p>
+          <p>Cook Time: {recipe.time}</p>
+          <p>Meal Info: {recipe.description}</p>
+          <p>Ingredients{recipe.ingredients}</p>
             {/* <p>{recipe.method}</p> */}
-          {console.log(mexicanRecipe)}
         </div>
       ))}
     </>

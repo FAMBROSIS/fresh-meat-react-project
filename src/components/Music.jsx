@@ -1,5 +1,6 @@
 import React,{ useState } from 'react'
 import YouTube from 'react-youtube'
+import '../Music.css'
 
 
 const Music = () => {
@@ -24,7 +25,7 @@ const Music = () => {
 
 
   return (
-    <div>
+    <div id='body'>
 
         {isPlaying && <YouTube videoId={videoURL} />}
         <p>Listen to something while you wait? Click Here</p>

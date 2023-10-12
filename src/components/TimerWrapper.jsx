@@ -18,6 +18,9 @@ export default function CountdownTimer() {
     show: false,
     message: "Happy coding in 2023",
   });
+/* The `useEffect` hook is used to perform side effects in a functional component. In this case, the
+`useEffect` hook is used to update the timer values (`milliseconds`, `seconds`, `minutes`, `hours`)
+based on the `isRunning` state. */
   useEffect(() => {
     let interval;
     if (isRunning) {

@@ -1,0 +1,27 @@
+#links{
+  display: flex;
+
+}
+#logo{
+  width: 50px;
+}
+
+#image{
+  width: 80px;
+  height: 80px;
+  position: relative;
+  right: 270px
+}
+
+#Navbar{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0%;
+
+}
+
+.me-auto{
+  position: relative; right: 90px;
+}
