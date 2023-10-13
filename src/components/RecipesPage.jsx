@@ -1,12 +1,16 @@
-import React from 'react'
-import Recipe from './Recipe'
+import React ,{useContext} from "react";
+import { TimerContext } from "../App";import Recipe from './Recipe'
 import VeganRecipe from './VeganRecipe'
 
 const RecipesPage = () => {
+  const fact=useContext(TimerContext)
   return (
     <div>
+      <div>
         <Recipe />
-        <VeganRecipe />
+        {/* <VeganRecipe /> */}
+        </div>
+        <div>{fact}</div>
     </div>
   )
 }

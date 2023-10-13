@@ -16,7 +16,7 @@ export default function CountdownTimer() {
 
   const [showEndScreen, setShowEndScreen] = useState({
     show: false,
-    message: "Happy coding in 2023",
+    message: "DING DING DING DING DING",
   });
 /* The `useEffect` hook is used to perform side effects in a functional component. In this case, the
 `useEffect` hook is used to update the timer values (`milliseconds`, `seconds`, `minutes`, `hours`)

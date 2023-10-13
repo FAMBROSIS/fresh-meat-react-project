@@ -8,7 +8,7 @@ import { TimerContext } from '../App';
 
 
 const HomePage = () => {
-  const {hours, minutes, seconds, milliseconds} = useContext(TimerContext)
+  const fact = useContext(TimerContext)
 
 
   
@@ -19,35 +19,16 @@ const HomePage = () => {
   
     return (
       <div id='body'>
-
-      {/* <div className="d-flex flex-column">
-        <label>hh</label>
-        <input value={hours} />
-      </div>{" "}
-      <div className="d-flex flex-column">
-        <label>mm</label>
-        <input value={minutes} />
-      </div>{" "}
-      <div className="d-flex flex-column">
-        <label>ss</label>
-        <input value={seconds} />
-      </div>{" "}
-      <div className="d-flex flex-column">
-        <label>ms</label>
-        <input value={milliseconds} />
-      </div> */}
-
-
-        {/* <button onClick={changeColor}></button> */}
-        <p>
+        {/* put under thenav */}
+        <div>
+        <h1>
           Welcome to Fresh Meat!!! A app geared toword new chefs in the kitchin who want to improve thier cullanary skills                                            
-        </p>
-        <br />
-
-        {/* <div>
-        <Recipe id='recipe' />
-        </div> */}
-
+        </h1>
+        </div>
+        <div id='top-container'>
+        <nav>{fact}</nav>
+        </div>
+        {/* put horizontal under the facts */}
       </div>
     );
   };

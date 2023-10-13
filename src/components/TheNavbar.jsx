@@ -28,7 +28,7 @@ const TheNavbar = () => {
             <Nav.Link href="#"><Link to="/homePage">Home</Link></Nav.Link>
             <Nav.Link href="#"><Link to="/content">While you wait</Link></Nav.Link>
             <Nav.Link href="#"><Link to="/tools">Tools</Link></Nav.Link>
-            <Nav.Link href="#"><Link to="/recipePage">Recipes</Link></Nav.Link>
+            <Nav.Link href="#"><Link to="/recipes">Recipes</Link></Nav.Link>
           </Nav>
         </Container>
       </Navbar>
