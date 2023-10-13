@@ -29,7 +29,7 @@ previous ones. */
 
       console.log(result);
     } catch (error) {
-      console.error(error);
+      window.alert(`error retreaving recipe`);
     }
   };
 
@@ -54,6 +54,7 @@ previous ones. */
       // Swap arr[i] and arr[j]
       [arr[i], arr[j]] = [arr[j], arr[i]];
       setRecipeId(arr[i]);
+      console.log(setRecipeId(arr[i]))
     }
   };
 
@@ -66,18 +67,18 @@ previous ones. */
     <>
       <div id="body">
         <button onClick={handleClick}>Get A Recipe?</button>
-        {console.log(handleClick)}
       </div>
       {mexicanRecipe.map((recipe, index) => (
         <div key={index}>
           <h1>{recipe.title}</h1>
-          <img src={recipe.image}></img>
+          <img src={recipe.image} id="recipe-image"></img>
           <p>Difficulty: {recipe.difficulty}</p>
           <p>Cook Time: {recipe.time}</p>
           <p>Meal Size: {recipe.portion}</p>
           <p>Meal Info: {recipe.description}</p>
-          <p>Ingredients{recipe.ingredients}</p>
-          {/* <p>{recipe.method}</p> */}
+          <p>Ingredients: {recipe.ingredients}</p>
+          <p>Instructions: {JSON.stringify(recipe.method)}</p>
+          {/* {console.log(recipe.method)} */}
         </div>
       ))}
     </>

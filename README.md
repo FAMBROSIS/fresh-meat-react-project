@@ -13,7 +13,6 @@ Timer: Set and manage timers to keep track of your cooking tasks.
 Video and Music Player: Enjoy video tutorials and music while you cook.
 Safety Facts Section: Access important safety information and tips for a secure cooking experience.
 Random Recipe Fetcher: Discover new and exciting recipes with a click.
-Routes
 The app is organized into three main routes:
 
 Home: The landing page that provides a brief overview and access to the app's features.
