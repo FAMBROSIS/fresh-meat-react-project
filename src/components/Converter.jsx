@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import '../Converter.css'
+import "../Converter.css";
 
 const Converter = () => {
   const [fromUnit, setFromUnit] = useState("");
@@ -12,7 +12,7 @@ const Converter = () => {
   const [currentConversion, setCurrentConversion] = useState("");
 
   const handleUnits = (e) => {
-    console.log("event", e.target.value); //targeting the value of the options in the dropdown
+
     setCurrentConversion(e.target.value);
     setValue("");
     setResult("");
@@ -45,28 +45,28 @@ const Converter = () => {
 
   const handleResult = (e) => {
     setResult(e.target.value);
-    if(e.target.value==""){
-        setValue("")
-    }else{
-    if (currentConversion == "1") {
-      setResult(parseFloat(e.target.value) / 0.33);
-    } else if (currentConversion == "2") {
-      setResult(parseFloat(e.target.value) / 0.5);
-    } else if (currentConversion == "3") {
-      setResult(parseFloat(e.target.value) / 0.13);
-    } else if (currentConversion == "4") {
-      setResult(parseFloat(e.target.value) / 0.5);
-    } else if (currentConversion == "5") {
-      setResult(parseFloat(e.target.value) / 0.5);
-    } else if (currentConversion == "6") {
-      setResult(parseFloat(e.target.value) / 0.25);
-    } else if (currentConversion == "7") {
-      setResult(parseFloat(e.target.value) / 3785.41);
-    } else if (currentConversion == "8") {
-      setResult(parseFloat(e.target.value) / 0.001);
+    if (e.target.value == "") {
+      setValue("");
+    } else {
+      if (currentConversion == "1") {
+        setResult(parseFloat(e.target.value) / 0.33);
+      } else if (currentConversion == "2") {
+        setResult(parseFloat(e.target.value) / 0.5);
+      } else if (currentConversion == "3") {
+        setResult(parseFloat(e.target.value) / 0.13);
+      } else if (currentConversion == "4") {
+        setResult(parseFloat(e.target.value) / 0.5);
+      } else if (currentConversion == "5") {
+        setResult(parseFloat(e.target.value) / 0.5);
+      } else if (currentConversion == "6") {
+        setResult(parseFloat(e.target.value) / 0.25);
+      } else if (currentConversion == "7") {
+        setResult(parseFloat(e.target.value) / 3785.41);
+      } else if (currentConversion == "8") {
+        setResult(parseFloat(e.target.value) / 0.001);
+      }
     }
   };
-}
 
   const handleValue = (e) => {
     setValue(e.target.value);
@@ -94,8 +94,7 @@ const Converter = () => {
   };
 
   return (
-
-        <div id="body">
+    <div id="body">
       <Form>
         <Form.Group className="mb-3" controlId="conversion">
           <Form.Label>Select Your Conversion</Form.Label>
@@ -133,8 +132,7 @@ const Converter = () => {
           />
         </Form.Group>
       </Form>
-      </div>
-
+    </div>
   );
 };
 

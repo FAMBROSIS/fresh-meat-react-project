@@ -1,10 +1,11 @@
-import React ,{useContext} from "react";
-import { TimerContext } from "../App";import Converter from "./Converter";
-import '../Tools.css'
-import TimerWrapper from './TimerWrapper'
+import React, { useContext } from "react";
+import { TimerContext } from "../App";
+import Converter from "./Converter";
+import "../Tools.css";
+import TimerWrapper from "./TimerWrapper";
 
 const Tools = () => {
-  const fact=useContext(TimerContext)
+  const fact = useContext(TimerContext);
   return (
     <div>
       <TimerWrapper />

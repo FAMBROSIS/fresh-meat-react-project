@@ -1,11 +1,10 @@
 import { createContext } from "react";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const VeganRecipe = () => {
   const { veganRecipe, setVeganRecipe } = useAPIContext();
   const [recipeId, setRecipeId] = useState(34);
   const [recipeData, setRecipeData] = useState(null);
-
 
   const fetchVRecipe = async () => {
     const url = `https://the-vegan-recipes-db.p.rapidapi.com/${recipeId}/`;
@@ -13,9 +12,9 @@ const VeganRecipe = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "80b360fcefmsh174cc3d1b1f6f97p1d3709jsn5ee1ff6263e8",
-		'X-RapidAPI-Host': 'the-vegan-recipes-db.p.rapidapi.com'
-    },
+        "X-RapidAPI-Key": "532d462c6fmsh5b753e8b3a957b5p12af45jsn77ff7661846a",
+        "X-RapidAPI-Host": "the-vegan-recipes-db.p.rapidapi.com",
+      },
     };
     try {
       const response = await fetch(url, options); //saying that we want to wait for the response(fetch function) and after the data is fetched the data is displayed

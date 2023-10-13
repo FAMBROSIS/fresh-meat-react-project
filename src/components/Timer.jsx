@@ -1,9 +1,8 @@
 import React from "react";
 import { BsStopwatch } from "react-icons/bs";
 import styled from "styled-components";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '../Timer.css'
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../Timer.css";
 
 const TimerWrapper = styled.div`
   margin-top: 30vh;
