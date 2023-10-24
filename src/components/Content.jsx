@@ -10,13 +10,14 @@ const Content = () => {
   return (
     <div id="body">
       <div id="content-div">
-        <div id="youtube">
-          <h2></h2>
+        <div id="music">
           <Music />
+          </div>
+        <div id="youtube">
           <Video />
         </div>
       </div>
-      <div>{fact}</div>
+      <div id='fact'>{fact}</div>
     </div>
   );
 };

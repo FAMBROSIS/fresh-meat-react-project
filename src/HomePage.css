@@ -1,13 +1,22 @@
 #body{
-    display: flex;
-    align-content: center;
-    background-color: #783937;
-    width: 100%;
+    background-color: #ffe4c4;
+
 }
-#recipe{
-align-content: center;
+#homeContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+}
+#homeSubtitle{
+    justify-content: center;
+    align-content: center;
 }
 
-#top-container{
-    position: relative; top: 0%;
+
+
+#homeBio{
+    text-align: center;
 }

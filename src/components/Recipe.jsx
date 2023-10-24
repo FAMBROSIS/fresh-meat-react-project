@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Recipe.css";
+
+
 const Recipe = () => {
   const [mexicanRecipe, setMexicanRecipe] = useState([]);
   const [recipeId, setRecipeId] = useState();
@@ -59,8 +61,8 @@ previous ones. */
   };
 
   const handleClick = () => {
+      generateNumbers(numbers);
     fetchMRecipe();
-    generateNumbers(numbers);
   };
 
   return (
@@ -78,6 +80,8 @@ previous ones. */
           <p>Meal Info: {recipe.description}</p>
           <p>Ingredients: {recipe.ingredients}</p>
           <p>Instructions: {JSON.stringify(recipe.method)}</p>
+          <button onClick={handleClick}>Get Another?</button>
+
           {/* {console.log(recipe.method)} */}
         </div>
       ))}

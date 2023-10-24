@@ -1,13 +1,7 @@
-#youtube{
-    display: flex;
-}
-/* div{
-    color: bisque;
-}
-p{
-    color: bisque
-} */
 #body{
-    background-color: #783937;
-    color: bisque;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 import "../Music.css";
 
@@ -14,17 +14,22 @@ const Music = () => {
     }
   };
 
+  useEffect(() => {
+    video();
+  }, []);
   const handleStart = () => {
     video();
   };
 
   return (
     <div id="body">
-      {isPlaying && <YouTube videoId={videoURL} />}
-      <p>Listen to something while you wait? Click Here</p>
-      <button id="button" onClick={handleStart}>
-        {isPlaying ? "Stop" : "     Play"}
-      </button>
+      <div>
+        {isPlaying && <YouTube videoId={videoURL} />}
+        <p>Listen to something while you wait? Click Here</p>
+        <button id="button" onClick={handleStart}>
+          {isPlaying ? "Stop" : "     Play"}
+        </button>
+      </div>
     </div>
   );
 };

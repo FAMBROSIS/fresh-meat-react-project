@@ -94,7 +94,7 @@ based on the `isRunning` state. */
   return (
     <div>
       {showEndScreen.show && (
-        <h1 className="title  text-light">{showEndScreen.message}</h1>
+        <h1 className="title  text-light" style={{textAlign: 'center'}}>{showEndScreen.message}</h1>
       )}
       <Timer
         milliseconds={milliseconds}
@@ -106,6 +106,7 @@ based on the `isRunning` state. */
         changeHours={changeHours}
       />
       <br />
+      <div id="buttons">
       {!isRunning && (
         <button className="btn btn-accept btn-lg" onClick={startTimer}>
           <BsFillPlayFill />
@@ -119,6 +120,7 @@ based on the `isRunning` state. */
       <button className="btn btn-danger btn-lg" onClick={stopTimer}>
         <BsStopFill />
       </button>
+      </div>
     </div>
   );
 }

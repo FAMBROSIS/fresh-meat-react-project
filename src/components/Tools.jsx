@@ -7,8 +7,10 @@ import TimerWrapper from "./TimerWrapper";
 const Tools = () => {
   const fact = useContext(TimerContext);
   return (
-    <div>
-      <TimerWrapper />
+    <div >
+      <div style={{resize: "both"}}>
+      <TimerWrapper/>
+      </div>
       <div id="tools">
         <Converter />
       </div>

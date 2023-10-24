@@ -1,0 +1,27 @@
+#routes{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #ffe4c4;
+}
+#titleAndLogo{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#body{
+    background-color: #ffe4c4;
+}
+
+img{
+    width: 5%;
+    height: auto;
+    margin-right: 20px;
+
+}
+

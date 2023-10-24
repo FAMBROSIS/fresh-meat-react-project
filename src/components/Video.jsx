@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 
 const Video = () => {
@@ -13,19 +13,28 @@ const Video = () => {
     }
   };
 
-  const handleStart = () => {
-    video();
-  };
-
+  useEffect(()=>{
+    video()
+},[])
+const handleStart = () => {
+  video();
+}
   return (
     <div id="body">
+        <div id="content-div">
+
       {isPlaying && <YouTube videoId={videoURL} />}
       <p>Watch something while you wait? Click Here</p>
-      {/* help the time pass? */}
+
+
       <button id="button" onClick={handleStart}>
+      {/* Need help passing the time? */}
         {isPlaying ? "Stop" : "     Play"}
       </button>
     </div>
+
+    </div>
+
   );
 };
 
